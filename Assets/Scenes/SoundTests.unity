@@ -191,9 +191,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 393ea98485fa24c40971f5a8b530b5a2, type: 3}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f657c58adb4c219419ae056411d88e27, type: 3}
 --- !u!1 &271995159 stripped
@@ -465,9 +473,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 31138af76b7ba2f43b0c9d0afbb16328, type: 3}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f657c58adb4c219419ae056411d88e27, type: 3}
 --- !u!1 &1431796462 stripped
@@ -557,9 +573,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 2690a6bc7c07f764bac36c2f2434e47e, type: 3}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f657c58adb4c219419ae056411d88e27, type: 3}
 --- !u!1 &1955115639 stripped
