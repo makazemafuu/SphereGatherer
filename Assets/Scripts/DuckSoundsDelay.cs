@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class DuckSoundsDelay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float MinSoundDelay = 1;
+    public float RandomDelay = 5;
+    private float NextSoundDelay = 0;
+    private AudioSource aSource;
+
+    private void computeNextSoundDelay()
     {
-        
+        NextSoundDelay = MinSoundDelay + Random.Range(0, RandomDelay);
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        aSource = GetComponent<AudioSource>();
+        computeNextSoundDelay();
+    }
+
     void Update()
     {
-        
+        NextSoundDelay -= Time.deltaTime;
+        if (NextSoundDelay <= 0)
+        {
+            aSource.Play();
+            computeNextSoundDelay();
+        }
     }
 }
