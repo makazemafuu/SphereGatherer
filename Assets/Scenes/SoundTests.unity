@@ -223,6 +223,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinSoundDelay: 1
   RandomDelay: 5
+--- !u!114 &271995161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271995159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7e3d8e77eba8149af12b6640dda6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinSoundDelay: 1
+  RandomDelay: 5
+  vitesseAvance: 2
+  vitesseTourne: 20
 --- !u!1 &283584086
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +521,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinSoundDelay: 1
   RandomDelay: 5
+--- !u!114 &1431796464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431796462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7e3d8e77eba8149af12b6640dda6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinSoundDelay: 1
+  RandomDelay: 5
+  vitesseAvance: 2
+  vitesseTourne: 20
 --- !u!1001 &1955115638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -605,6 +637,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinSoundDelay: 1
   RandomDelay: 5
+--- !u!114 &1955115641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955115639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7e3d8e77eba8149af12b6640dda6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinSoundDelay: 1
+  RandomDelay: 5
+  vitesseAvance: 2
+  vitesseTourne: 20
 --- !u!1 &2090528753
 GameObject:
   m_ObjectHideFlags: 0
