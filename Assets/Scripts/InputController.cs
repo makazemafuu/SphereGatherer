@@ -12,7 +12,6 @@ public class InputController : Controller
     // Update is called once per frame
     void Update()
     {
-
         //Lecture des inputs
         Vector2 axisLook = new Vector2(Input.GetAxis(MouseXName), Input.GetAxis(MouseYName));
 
@@ -20,11 +19,14 @@ public class InputController : Controller
         //Deadzone deja gérée par les axis
         if (axisLook.x != 0 || axisLook.y != 0)
         {
-            Vector3 WantedDirectionLookRight = Vector3.Cross(Vector3.up, WantedDirectionLook);
+            Vector3 WantedDirectionLookRightTargetSmooth = Vector3.Cross(transform.up, WantedDirectionLookTargetSmooth).normalized;
             Quaternion rotateHorizontal = Quaternion.AngleAxis(axisLook.x * XSensivity * Time.deltaTime, Vector3.up);
-            Quaternion rotateVertical = Quaternion.AngleAxis(-axisLook.y * YSensivity * Time.deltaTime, WantedDirectionLookRight);
-            WantedDirectionLook = rotateHorizontal * rotateVertical * WantedDirectionLook;
+            Quaternion rotateVertical = Quaternion.AngleAxis(-axisLook.y * YSensivity * Time.deltaTime, WantedDirectionLookRightTargetSmooth);
+            WantedDirectionLookTargetSmooth = rotateHorizontal * rotateVertical * WantedDirectionLookTargetSmooth;
         }
+
+        //On applique doucement
+        SmoothWantedDirectionLook(Time.deltaTime);
 
         //On affiche le debug
         DrawDebug();
