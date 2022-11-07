@@ -707,7 +707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSpeed: 4
   Player: {fileID: 319654993}
-  distanceToPlayer: 4
+  distanceToPlayer: 0
   upDownMax: 80
   upDownMin: -80
   rotationSmoothTime: 0.12

@@ -6,7 +6,7 @@ public class CameraScript : MonoBehaviour
 {
     public float mouseSpeed = 4;
     public Transform Player;
-    public float distanceToPlayer = 4;
+    public float distanceToPlayer = 0;
 
     public float upDownMax = 80;
     public float upDownMin = -80;
