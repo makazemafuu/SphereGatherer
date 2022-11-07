@@ -12,10 +12,11 @@ public abstract class Controller : MonoBehaviour
 
     protected Vector3 WantedDirectionLookTargetSmooth = new Vector3(0, 0, 1);
     public float SmoothFactor = 0.2f;
+    private const float SmoothFactorDivisor = 1e6f;
 
     protected void SmoothWantedDirectionLook(float deltaTime)
     {
-        float t = Mathf.Clamp(1 - SmoothFactor, 0, 1);
+        float t = Mathf.Clamp(1 - Mathf.Pow(SmoothFactor / SmoothFactorDivisor, Time.deltaTime), 0, 1);
         WantedDirectionLook = Vector3.Lerp(WantedDirectionLook, WantedDirectionLookTargetSmooth, t).normalized;
     }
 
