@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Duck3
       objectReference: {fileID: 0}
+    - target: {fileID: 166016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -351,7 +355,7 @@ Transform:
   m_GameObject: {fileID: 344299600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.1157371, y: 1.6392194, z: -0.49300718}
-  m_LocalScale: {x: 5, y: 3, z: 1}
+  m_LocalScale: {x: 7, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 949431655}
@@ -532,7 +536,7 @@ Transform:
   m_GameObject: {fileID: 652672806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.1157371, y: 1.6392194, z: 3.5}
-  m_LocalScale: {x: 5, y: 3, z: 1}
+  m_LocalScale: {x: 7, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 949431655}
@@ -625,7 +629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949431654}
   m_LocalRotation: {x: -0, y: 0.7007637, z: -0, w: 0.7133935}
-  m_LocalPosition: {x: -0.41, y: -0.15999997, z: 4.64}
+  m_LocalPosition: {x: 0.06, y: -1.38, z: 2.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -663,7 +667,7 @@ Transform:
   m_GameObject: {fileID: 1237368263}
   m_LocalRotation: {x: 0.71546245, y: -0, z: -0, w: 0.6986512}
   m_LocalPosition: {x: -1.12, y: 3.56, z: 1.51}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 7, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 949431655}
@@ -769,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.19
+      value: -1.63
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_LocalRotation.w
@@ -834,6 +838,20 @@ MonoBehaviour:
   RandomDelay: 5
   vitesseAvance: 2
   vitesseTourne: 20
+--- !u!114 &1431796467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431796462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2ebf14a5e131840ba4110f0f231322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centreZone: {x: 0, y: 0, z: 0}
+  radiusStartEffect: 10
 --- !u!1001 &1955115638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -844,6 +862,10 @@ PrefabInstance:
     - target: {fileID: 166016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_Name
       value: Duck2
+      objectReference: {fileID: 0}
+    - target: {fileID: 166016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_RootOrder
