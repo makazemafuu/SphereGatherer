@@ -569,9 +569,7 @@ GameObject:
   - component: {fileID: 2028354022}
   - component: {fileID: 2028354021}
   - component: {fileID: 2028354020}
-  - component: {fileID: 2028354024}
   - component: {fileID: 2028354023}
-  - component: {fileID: 2028354025}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -657,34 +655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d12a2cb541872428c6af097431b3e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedH: 2
-  speedV: 2
---- !u!114 &2028354024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2028354019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 989925ee045ced34ba577dba884ff703, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 319654993}
-  cameraOffset: {x: 0, y: 0, z: 0}
-  smoothFactor: 0.5
-  lookAtTarget: 1
---- !u!114 &2028354025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2028354019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d497d2c53cd679d4eabcb7e4f8f86a4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: -1
+  mouseSpeed: 4
+  Player: {fileID: 319654993}
+  distanceToPlayer: 4
+  upDownMax: 80
+  upDownMin: -80
+  rotationSmoothTime: 0.12
