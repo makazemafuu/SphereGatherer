@@ -614,6 +614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 949431655}
+  - component: {fileID: 949431656}
   m_Layer: 0
   m_Name: Tunnel
   m_TagString: Untagged
@@ -639,6 +640,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 88.977, z: 0}
+--- !u!114 &949431656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949431654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2ebf14a5e131840ba4110f0f231322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centreZone: {x: 0, y: 0, z: 0}
+  radiusStartEffect: 10
+  mixer: {fileID: 0}
+  trackedObjects: []
 --- !u!1 &1237368263
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,20 +855,6 @@ MonoBehaviour:
   RandomDelay: 5
   vitesseAvance: 2
   vitesseTourne: 20
---- !u!114 &1431796467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431796462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b2ebf14a5e131840ba4110f0f231322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centreZone: {x: 0, y: 0, z: 0}
-  radiusStartEffect: 10
 --- !u!1001 &1955115638
 PrefabInstance:
   m_ObjectHideFlags: 0
