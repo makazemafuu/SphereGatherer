@@ -657,8 +657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2ebf14a5e131840ba4110f0f231322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centreZone: {x: 0, y: 0, z: 0}
-  radiusStartEffect: 10
+  centreZone: {x: -1, y: 2, z: 2}
+  radiusStartEffect: 5
   mixer: {fileID: 24100000, guid: 6078eab9410a8c24a85a90c3a7eb7d64, type: 2}
   trackedObjects:
   - transform: {fileID: 1431796466}
