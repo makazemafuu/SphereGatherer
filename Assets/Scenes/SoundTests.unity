@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 166016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_RootOrder
@@ -229,6 +229,11 @@ MonoBehaviour:
   RandomDelay: 5
   vitesseAvance: 2
   vitesseTourne: 20
+--- !u!4 &271995163 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+  m_PrefabInstance: {fileID: 271995158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &283584086
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +660,19 @@ MonoBehaviour:
   centreZone: {x: 0, y: 0, z: 0}
   radiusStartEffect: 10
   mixer: {fileID: 0}
-  trackedObjects: []
+  trackedObjects:
+  - transform: {fileID: 1431796466}
+    MixerParameter: ReverbDuck1
+    MinVal: -80
+    MaxVal: 0
+  - transform: {fileID: 1955115643}
+    MixerParameter: ReverbDuck2
+    MinVal: -80
+    MaxVal: 0
+  - transform: {fileID: 271995163}
+    MixerParameter: ReverbDuck3
+    MinVal: -80
+    MaxVal: 0
 --- !u!1 &1237368263
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +872,11 @@ MonoBehaviour:
   RandomDelay: 5
   vitesseAvance: 2
   vitesseTourne: 20
+--- !u!4 &1431796466 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+  m_PrefabInstance: {fileID: 1431796461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1955115638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -868,7 +890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 166016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_RootOrder
@@ -961,6 +983,11 @@ MonoBehaviour:
   RandomDelay: 5
   vitesseAvance: 2
   vitesseTourne: 20
+--- !u!4 &1955115643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+  m_PrefabInstance: {fileID: 1955115638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2090528753
 GameObject:
   m_ObjectHideFlags: 0
