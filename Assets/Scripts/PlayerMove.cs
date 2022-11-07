@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
     private float motionUpDown;
     private float motionLeftRight;
     private Rigidbody playerRb;
+    public bool WantsToShoot { get; protected set; } = false;
 
     //[SerializeField] GameObject UI;
 
@@ -52,6 +53,9 @@ public class PlayerMove : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
         }
+
+        WantsToShoot = Input.GetButton("Fire1");
+
     }
 
     private void OnCollisionEnter(Collision collision)
