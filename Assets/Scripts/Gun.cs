@@ -15,7 +15,7 @@ public class Gun : MonoBehaviour
         if (MyController.WantsToShoot)
         {
             //Création du projetctile au bon endroit
-            Transform proj = GameObject.Instantiate<Tranform>(PrefabProjectile,
+            Transform proj = GameObject.Instantiate<Tranforms>(PrefabProjectile,
                 transform.position + transform.forward * OffsetForwardShoot, transform.rotation);
             //Ajout d une impulsion de départ
             proj.GetComponent<Rigidbody>().AddForce(transform.forward * ProjectileStartSpeed, ForceMode.Impulse);
