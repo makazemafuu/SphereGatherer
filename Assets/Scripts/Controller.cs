@@ -18,6 +18,15 @@ public abstract class Controller : MonoBehaviour
     {
         float t = Mathf.Clamp(1 - Mathf.Pow(SmoothFactor / SmoothFactorDivisor, Time.deltaTime), 0, 1);
         WantedDirectionLook = Vector3.Lerp(WantedDirectionLook, WantedDirectionLookTargetSmooth, t).normalized;
+
+        //On change la direction de marche au clavier
+        Vector2 axisMove = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+        Vector3 WantedDirectionRight = Vector3.Cross(Vector3.up, WantedDirectionLook);
+        WantedDirectionMove = WantedDirectionLook * axisMove.y + WantedDirectionRight * axisMove.x;
+
+        //Vitesse entre 0 et 1, la vitesse réelle dépendra du corps qu on controlera
+        WantedSpeed = Mathf.Max(Mathf.Abs(axisMove.x), Mathf.Abs(axisMove.y));
     }
 
     protected void DrawDebug()
