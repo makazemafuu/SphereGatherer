@@ -607,6 +607,7 @@ MonoBehaviour:
   PrefabProjectile: {fileID: 7872775612889171050, guid: d5ae073be6c8df745926a0c18205c532, type: 3}
   ProjectileStartSpeed: 2
   OffsetForwardShoot: 2
+  TimeBetweenShots: 0.5
 --- !u!1 &2028354019
 GameObject:
   m_ObjectHideFlags: 0
