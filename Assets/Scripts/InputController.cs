@@ -9,6 +9,8 @@ public class InputController : Controller
     public string MouseXName = "Mouse X";
     public string MouseYName = "Mouse Y";
 
+    public float MaxUpDownAngle = 70; //Angle max de rot verticale depuis l horizontal
+
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +24,18 @@ public class InputController : Controller
             Vector3 WantedDirectionLookRightTargetSmooth = Vector3.Cross(transform.up, WantedDirectionLookTargetSmooth).normalized;
             Quaternion rotateHorizontal = Quaternion.AngleAxis(axisLook.x * XSensivity * Time.deltaTime, Vector3.up);
             Quaternion rotateVertical = Quaternion.AngleAxis(-axisLook.y * YSensivity * Time.deltaTime, WantedDirectionLookRightTargetSmooth);
+
+            //On teste la rotation verticale par rapport au max
+            Vector3 afterVertRot = rotateVertical * WantedDirectionLookTargetSmooth;
+            float angleWithUp = Vector3.Angle(afterVertRot, Vector3.up);
+            float angleMinWithUp = 90 - MaxUpDownAngle;
+            if (angleWithUp < angleMinWithUp)
+                rotateVertical *= Quaternion.AngleAxis(angleMinWithUp - angleWithUp, WantedDirectionLookRightTargetSmooth);
+            float angleMaxWithUp = 90 + MaxUpDownAngle;
+            if (angleWithUp > angleMaxWithUp)
+                rotateVertical *= Quaternion.AngleAxis(angleMaxWithUp - angleWithUp, WantedDirectionLookRightTargetSmooth);
+
+
             WantedDirectionLookTargetSmooth = rotateHorizontal * rotateVertical * WantedDirectionLookTargetSmooth;
         }
 
