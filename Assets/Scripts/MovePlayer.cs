@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePlayer : MonoBehaviour
+public class Body : MonoBehaviour
 {
     public Controller MyController;
     public float MaxSpeed = 5;
