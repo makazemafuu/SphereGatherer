@@ -59,7 +59,7 @@ public class PlayerMove : MonoBehaviour
         Vector3 acceleration = (vecForceInput / GetComponent<Rigidbody>().mass) * Time.deltaTime;
         Vector3 newVelocity = currentVelocity + acceleration;
 
-        //Si on depasse la vitesse max, on scale l acceleration
+        //Si on depasse la vitesse max, on scale l'acceleration
         if (newVelocity.sqrMagnitude > speed * speed)
         {
             float alpha = 0;
@@ -99,13 +99,10 @@ public class PlayerMove : MonoBehaviour
         {
             GetComponent<Rigidbody>().angularVelocity = new Vector3();
         }
-
-        WantsToShoot = Input.GetButton("Fire1");
-
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
         //get player input
         motionUpDown = Input.GetAxis("Vertical");
@@ -137,7 +134,7 @@ public class PlayerMove : MonoBehaviour
 
         WantsToShoot = Input.GetButton("Fire1");
 
-    }*/
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
