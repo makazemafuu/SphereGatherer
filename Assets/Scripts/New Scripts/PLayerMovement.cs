@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    //to shoot things
+    public bool WantsToShoot { get; protected set; } = false;
+
     Vector3 velocity;
     bool isGrounded;
 
@@ -45,5 +48,8 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+        //On gère le shoot
+        WantsToShoot = Input.GetButton("Fire1");
     }
 }

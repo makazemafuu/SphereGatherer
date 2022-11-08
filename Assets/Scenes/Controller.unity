@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 799311177}
   - component: {fileID: 799311178}
   - component: {fileID: 799311179}
+  - component: {fileID: 799311180}
   m_Layer: 0
   m_Name: FirstPersonPlayer
   m_TagString: Untagged
@@ -459,6 +460,23 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &799311180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799311176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e5dd7e9032ad6428850a36eca6b7c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyController: {fileID: 799311179}
+  PrefabProjectile: {fileID: 7872775612889171050, guid: d5ae073be6c8df745926a0c18205c532, type: 3}
+  ProjectileStartSpeed: 2
+  OffsetForwardShoot: 2
+  TimeBetweenShots: 0.5
 --- !u!1 &868474220
 GameObject:
   m_ObjectHideFlags: 0
