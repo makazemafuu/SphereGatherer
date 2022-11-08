@@ -137,8 +137,9 @@ GameObject:
   - component: {fileID: 742866802}
   - component: {fileID: 742866807}
   - component: {fileID: 742866806}
-  - component: {fileID: 742866808}
   - component: {fileID: 742866810}
+  - component: {fileID: 742866812}
+  - component: {fileID: 742866811}
   - component: {fileID: 742866809}
   m_Layer: 0
   m_Name: Player
@@ -254,55 +255,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e5dd7e9032ad6428850a36eca6b7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyController: {fileID: 742866808}
+  MyController: {fileID: 0}
   PrefabProjectile: {fileID: 7872775612889171050, guid: d5ae073be6c8df745926a0c18205c532, type: 3}
   ProjectileStartSpeed: 10
   OffsetForwardShoot: 2
   TimeBetweenShots: 0.5
---- !u!114 &742866808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 742866799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f79c4e9a4af7b4ebe7bb28295aff58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyController: {fileID: 742866808}
-  speed: 5
-  rotationSpeed: 0
-  jumpForce: 5
-  ForceInput: 100
-  isOnGround: 1
-  isOnTerrain: 0
-  SlopeAccelerationMultiplier:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  groundTouchDistance: 0.1
 --- !u!114 &742866809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +284,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675607638e67e3d499c7ca16dacd0e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &742866811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742866799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faedda737aae6145881e3033c6d8215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyController: {fileID: 742866812}
+  MaxSpeed: 5
+  ForceInput: 100
+  SlopeAccelerationMultiplyer:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationSpeed: 180
+  groundTouchDistance: 0.1
+--- !u!114 &742866812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742866799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d295eda64f6e5f14d8472514b38267b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrawDebugDirections: 0
+  SmoothFactor: 0.2
+  XSensivity: 360
+  YSensivity: 360
+  MouseXName: Mouse X
+  MouseYName: Mouse Y
+  MaxUpDownAngle: 70
 --- !u!1 &1047128778
 GameObject:
   m_ObjectHideFlags: 0
