@@ -37,6 +37,9 @@ public class InputController : Controller
 
 
             WantedDirectionLookTargetSmooth = rotateHorizontal * rotateVertical * WantedDirectionLookTargetSmooth;
+
+            //On gère le shoot
+    WantsToShoot = Input.GetButton("Fire1");
         }
 
         //On applique doucement

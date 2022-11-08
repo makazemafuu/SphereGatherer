@@ -9,6 +9,7 @@ public abstract class Controller : MonoBehaviour
     public float WantedSpeed { get; protected set; } = 0;
 
     public bool DrawDebugDirections = false;
+    public bool WantsToShoot { get; protected set; } = false;
 
     protected Vector3 WantedDirectionLookTargetSmooth = new Vector3(0, 0, 1);
     public float SmoothFactor = 0.2f;
