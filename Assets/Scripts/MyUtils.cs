@@ -31,4 +31,17 @@ public class MyUtils
 
         return true;
     }
+
+    public static void test_ScaleBToGetMagAPlusB()
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            Vector3 A = Random.onUnitSphere * Random.Range(-100, 100);
+            Vector3 B = Random.onUnitSphere * Random.Range(-100, 100);
+            float magSum = Random.Range(0, 100);
+            float alpha;
+            if (ScaleBToGetMagAPlusB(A, B, magSum, out alpha))
+                Debug.Log("A:" + A + " B:" + B + " magSum:" + magSum + " alpha:" + alpha + " res:" + (magSum - (A + alpha * B).magnitude));
+        }
+    }
 }

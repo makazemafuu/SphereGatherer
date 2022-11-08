@@ -16,10 +16,23 @@ public class Body : MonoBehaviour
         Vector3 wantedDirectionMoveBody = MyController.WantedDirectionMove;
         wantedDirectionMoveBody.y = 0;
 
-        //Si la vitesse est inférieure a notre max speed, on applique une force
-        if (GetComponent<Rigidbody>().velocity.sqrMagnitude < MaxSpeed * MaxSpeed)
-            GetComponent<Rigidbody>().AddForce(wantedDirectionMoveBody * ForceInput * MyController.WantedSpeed);
+        Vector3 vecForceInput = wantedDirectionMoveBody * ForceInput * MyController.WantedSpeed;
+        Vector3 currentVelocity = GetComponent<Rigidbody>().velocity;
+        Vector3 acceleration = (vecForceInput / GetComponent<Rigidbody>().mass) * Time.deltaTime;
+        Vector3 newVelocity = currentVelocity + acceleration;
 
+        //Si on depasse la vitesse max, on scale l acceleration
+        if (newVelocity.sqrMagnitude > MaxSpeed * MaxSpeed)
+        {
+            float alpha = 0;
+            MyUtils.ScaleBToGetMagAPlusB(currentVelocity, acceleration, MaxSpeed, out alpha);
+            vecForceInput = (alpha * acceleration * GetComponent<Rigidbody>().mass) / Time.deltaTime;
+        }
+
+        //On applique la force
+        GetComponent<Rigidbody>().AddForce(vecForceInput);
+
+        //Gère la rotation du corps
         GetComponent<Rigidbody>().MoveRotation(Quaternion.LookRotation(wantedDirectionMoveBody, Vector3.up));
     }
 }
