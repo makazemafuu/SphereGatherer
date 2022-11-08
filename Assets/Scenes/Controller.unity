@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 200753945}
   - component: {fileID: 200753944}
   - component: {fileID: 200753943}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bridge (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 205078628}
   - component: {fileID: 205078627}
   - component: {fileID: 205078626}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stairs (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205078624}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.89, z: 7.42}
+  m_LocalPosition: {x: 0, y: -1.84, z: 7.42}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -326,9 +326,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 373122904}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,6 +351,37 @@ Transform:
   - {fileID: 205078625}
   - {fileID: 1932838915}
   m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &597151282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 597151283}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &597151283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597151282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 799311177}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &799311176
@@ -379,12 +410,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799311176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26, y: 1.85, z: 14.35}
+  m_LocalPosition: {x: 0.26, y: 1.81, z: 14.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 868474221}
   - {fileID: 2028354022}
+  - {fileID: 597151283}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -399,7 +431,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 3.8
+  m_Height: 3.5
   m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 1
@@ -420,7 +452,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 799311178}
   speed: 12
-  gravity: -9.81
+  gravity: -19.62
+  jumpHeight: 3
+  groundCheck: {fileID: 597151283}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &868474220
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +554,7 @@ GameObject:
   - component: {fileID: 1047128781}
   - component: {fileID: 1047128780}
   - component: {fileID: 1047128779}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bridge
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -707,7 +745,7 @@ GameObject:
   - component: {fileID: 1603829021}
   - component: {fileID: 1603829020}
   - component: {fileID: 1603829019}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -805,7 +843,7 @@ GameObject:
   - component: {fileID: 1932838918}
   - component: {fileID: 1932838917}
   - component: {fileID: 1932838916}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Slope
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -902,7 +940,7 @@ GameObject:
   - component: {fileID: 1988990288}
   - component: {fileID: 1988990287}
   - component: {fileID: 1988990286}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stairs
   m_TagString: Ground
   m_Icon: {fileID: 0}
