@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public MovePlayer MyController;
+    public InputController MyController;
     public Transform PrefabProjectile;
     public float ProjectileStartSpeed = 50;
     public float OffsetForwardShoot = 2;
