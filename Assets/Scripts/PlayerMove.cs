@@ -99,10 +99,13 @@ public class PlayerMove : MonoBehaviour
         {
             GetComponent<Rigidbody>().angularVelocity = new Vector3();
         }
+
+        WantsToShoot = Input.GetButton("Fire1");
+
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         //get player input
         motionUpDown = Input.GetAxis("Vertical");
@@ -134,7 +137,7 @@ public class PlayerMove : MonoBehaviour
 
         WantsToShoot = Input.GetButton("Fire1");
 
-    }
+    }*/
 
     private void OnCollisionEnter(Collision collision)
     {
