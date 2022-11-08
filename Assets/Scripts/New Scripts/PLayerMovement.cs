@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        //Vector 3 move = new Vector3(x, 0f, z) --- FOR GLOBAL SPACE
+        //Vector 3 move = new Vector3(x, 0f, z); --- FOR GLOBAL SPACE
 
         //direction based on our x & z movement on local coordinates
         Vector3 move = transform.right * x + transform.forward * z;
