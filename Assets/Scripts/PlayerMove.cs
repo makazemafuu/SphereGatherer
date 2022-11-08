@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public PlayerMove MyController;
     public float speed = 5.0f;
     public float rotationSpeed;
     public float jumpForce = 5.0f;
+    public float ForceInput = 100;
     public bool isOnGround = true;
     public bool isOnTerrain = false;
     private float motionUpDown;
     private float motionLeftRight;
     private Rigidbody playerRb;
     public bool WantsToShoot { get; protected set; } = false;
+    public AnimationCurve SlopeAccelerationMultiplier = new AnimationCurve(new Keyframe[] { new Keyframe(0, 1), new Keyframe(45, 0) });
+    public Vector3 WantedDirectionMove { get; protected set; } = new Vector3(0, 0, 1);
 
     //[SerializeField] GameObject UI;
 
@@ -21,6 +25,29 @@ public class PlayerMove : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         //UI.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        //On tourne le corps dans le sens du déplacement
+        //On reste toujours vertical
+        Vector3 wantedDirectionMoveBody = MyController.WantedDirectionMove;
+        wantedDirectionMoveBody.y = 0;
+
+        Vector3 vecForceInput = wantedDirectionMoveBody * ForceInput * MyController.speed;
+
+        //On regarde le sol
+        RaycastHit hitInfo;
+        if (Physics.SphereCast(transform.position, 0.1f, Vector3.down, out hitInfo))
+        {
+            float angle = Vector3.Angle(hitInfo.normal, Vector3.up);
+            vecForceInput *= SlopeAccelerationMultiplier.Evaluate(angle);
+
+            //On aide à monter les pentes : on oriente l'input dans le plan du sol
+            float magInput = vecForceInput.magnitude;
+            vecForceInput = Vector3.ProjectOnPlane(vecForceInput, hitInfo.normal).normalized * magInput;
+        }
     }
 
     // Update is called once per frame
