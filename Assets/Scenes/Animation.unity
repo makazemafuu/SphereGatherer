@@ -385,6 +385,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 476903767}
+--- !u!114 &1092791286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092791283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PetitCubeAsset: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
+  OffsetCreation: {x: 0, y: 2, z: 0}
 --- !u!1 &1316023378
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +568,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1895199915}
+--- !u!114 &1433924617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433924614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PetitCubeAsset: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
+  OffsetCreation: {x: 0, y: 2, z: 0}
 --- !u!1001 &1438266408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -629,6 +657,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1580275523}
+--- !u!114 &1438266412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438266409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PetitCubeAsset: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
+  OffsetCreation: {x: 0, y: 2, z: 0}
 --- !u!95 &1520693013 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 975815084889314992, guid: c98773da6392af64cab82875e9521596, type: 3}
@@ -719,3 +761,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1520693013}
+--- !u!114 &975815084110136365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975815084110136362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PetitCubeAsset: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
+  OffsetCreation: {x: 0, y: 2, z: 0}
