@@ -123,11 +123,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &476903765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 975815084889315005, guid: c98773da6392af64cab82875e9521596, type: 3}
+  m_PrefabInstance: {fileID: 1092791282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &476903767 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 975815084889314992, guid: c98773da6392af64cab82875e9521596, type: 3}
   m_PrefabInstance: {fileID: 1092791282}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &476903771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476903765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PetitCubeAsset: {fileID: 7021679500635108870, guid: 07ee15c4fb2521549ba78be32bd64ba5, type: 3}
+  OffsetCreation: {x: 0, y: 2, z: 0}
 --- !u!1 &726341619
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,20 +404,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 476903767}
---- !u!114 &1092791286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092791283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PetitCubeAsset: {fileID: 7021679500635108870, guid: 07ee15c4fb2521549ba78be32bd64ba5, type: 3}
-  OffsetCreation: {x: 0, y: 2, z: 0}
 --- !u!1 &1316023378
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,20 +573,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1895199915}
---- !u!114 &1433924617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433924614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PetitCubeAsset: {fileID: 7103865294865922069, guid: 1c85383fcf8bfab4d846adda39f52671, type: 3}
-  OffsetCreation: {x: 0, y: 2, z: 0}
 --- !u!1001 &1438266408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -657,13 +648,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1580275523}
---- !u!114 &1438266412
+--- !u!1 &1520693011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 975815084889315005, guid: c98773da6392af64cab82875e9521596, type: 3}
+  m_PrefabInstance: {fileID: 975815084110136361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1520693013 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 975815084889314992, guid: c98773da6392af64cab82875e9521596, type: 3}
+  m_PrefabInstance: {fileID: 975815084110136361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1520693017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438266409}
+  m_GameObject: {fileID: 1520693011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PetitCubeAsset: {fileID: 6677174945526656317, guid: c2136454a7ab1734694dba2bab669227, type: 3}
+  OffsetCreation: {x: 0, y: 2, z: 0}
+--- !u!1 &1580275521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 975815084889315005, guid: c98773da6392af64cab82875e9521596, type: 3}
+  m_PrefabInstance: {fileID: 1438266408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1580275523 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 975815084889314992, guid: c98773da6392af64cab82875e9521596, type: 3}
+  m_PrefabInstance: {fileID: 1438266408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1580275527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580275521}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
@@ -671,21 +696,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PetitCubeAsset: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
   OffsetCreation: {x: 0, y: 2, z: 0}
---- !u!95 &1520693013 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 975815084889314992, guid: c98773da6392af64cab82875e9521596, type: 3}
-  m_PrefabInstance: {fileID: 975815084110136361}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1580275523 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 975815084889314992, guid: c98773da6392af64cab82875e9521596, type: 3}
-  m_PrefabInstance: {fileID: 1438266408}
+--- !u!1 &1895199913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 975815084889315005, guid: c98773da6392af64cab82875e9521596, type: 3}
+  m_PrefabInstance: {fileID: 1433924613}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &1895199915 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 975815084889314992, guid: c98773da6392af64cab82875e9521596, type: 3}
   m_PrefabInstance: {fileID: 1433924613}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1895199919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895199913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PetitCubeAsset: {fileID: 7103865294865922069, guid: 1c85383fcf8bfab4d846adda39f52671, type: 3}
+  OffsetCreation: {x: 0, y: 2, z: 0}
 --- !u!1001 &975815084110136361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -761,17 +795,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1520693013}
---- !u!114 &975815084110136365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975815084110136362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PetitCubeAsset: {fileID: 6677174945526656317, guid: c2136454a7ab1734694dba2bab669227, type: 3}
-  OffsetCreation: {x: 0, y: 2, z: 0}
