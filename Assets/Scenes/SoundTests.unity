@@ -203,9 +203,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 393ea98485fa24c40971f5a8b530b5a2, type: 3}
     - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 5107443512926865042, guid: 6078eab9410a8c24a85a90c3a7eb7d64, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f657c58adb4c219419ae056411d88e27, type: 3}
 --- !u!1 &271995159 stripped
@@ -662,15 +670,15 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: 6078eab9410a8c24a85a90c3a7eb7d64, type: 2}
   trackedObjects:
   - transform: {fileID: 1431796466}
-    MixerParameter: ReverbDuck1
+    MixerParameter: 
     MinVal: -80
     MaxVal: 0
   - transform: {fileID: 1955115643}
-    MixerParameter: ReverbDuck2
+    MixerParameter: 
     MinVal: -80
     MaxVal: 0
   - transform: {fileID: 271995163}
-    MixerParameter: ReverbDuck3
+    MixerParameter: 
     MinVal: -80
     MaxVal: 0
 --- !u!1 &1237368263
@@ -846,9 +854,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 31138af76b7ba2f43b0c9d0afbb16328, type: 3}
     - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2260709183395690790, guid: 6078eab9410a8c24a85a90c3a7eb7d64, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f657c58adb4c219419ae056411d88e27, type: 3}
 --- !u!1 &1431796462 stripped
@@ -957,9 +973,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 2690a6bc7c07f764bac36c2f2434e47e, type: 3}
     - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8510612989168063730, guid: 6078eab9410a8c24a85a90c3a7eb7d64, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f657c58adb4c219419ae056411d88e27, type: 3}
 --- !u!1 &1955115639 stripped

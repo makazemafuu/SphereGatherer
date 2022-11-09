@@ -14,7 +14,7 @@ public class Reverbation : MonoBehaviour
     public class TrackedObject
     {
         public Transform transform;
-        public string MixerParameter = "Undefined Tracked Param";
+        //public string MixerParameter = "Undefined Tracked Param";
         public float MinVal = 0;
         public float MaxVal = 0;
     }
@@ -31,7 +31,7 @@ public class Reverbation : MonoBehaviour
             //La valeur de l'effet : Min + (Max-Min) * distanceNormalisée
             float effectVal = t.MinVal + (t.MaxVal - t.MinVal) * (1.0f - (distToT / radiusStartEffect));
             //On ajoute le paramètre au mixer
-            mixer.SetFloat(t.MixerParameter, effectVal);
+            //mixer.SetFloat(t.MixerParameter, effectVal);
         }
     }
 
