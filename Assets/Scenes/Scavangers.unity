@@ -474,9 +474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyController: {fileID: 799311179}
-  PrefabProjectile: {fileID: 7872775612889171050, guid: d5ae073be6c8df745926a0c18205c532, type: 3}
-  ProjectileStartSpeed: 2
-  OffsetForwardShoot: 2
+  PrefabProjectile: {fileID: 7939308999921531984, guid: d5ae073be6c8df745926a0c18205c532, type: 3}
+  ProjectileStartSpeed: 20
+  OffsetForwardShoot: 10
   TimeBetweenShots: 0.5
 --- !u!1 &868474220
 GameObject:
