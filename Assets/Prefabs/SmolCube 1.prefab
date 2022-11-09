@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1668193243249802080
+--- !u!1001 &2961525841024527944
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5443879804243629656, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
       propertyPath: m_Name
-      value: SmolCube Variant
+      value: SmolCube Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
       propertyPath: m_RootOrder
@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25
+      value: 3.65
       objectReference: {fileID: 0}
     - target: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
       propertyPath: m_LocalPosition.y

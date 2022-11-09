@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PetitCubeAsset: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
+  PetitCubeAsset: {fileID: 7021679500635108870, guid: 07ee15c4fb2521549ba78be32bd64ba5, type: 3}
   OffsetCreation: {x: 0, y: 2, z: 0}
 --- !u!1 &1316023378
 GameObject:
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PetitCubeAsset: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
+  PetitCubeAsset: {fileID: 7103865294865922069, guid: 1c85383fcf8bfab4d846adda39f52671, type: 3}
   OffsetCreation: {x: 0, y: 2, z: 0}
 --- !u!1001 &1438266408
 PrefabInstance:
@@ -773,5 +773,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed68ac094c745e4981a4783ca5b006c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PetitCubeAsset: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
+  PetitCubeAsset: {fileID: 6677174945526656317, guid: c2136454a7ab1734694dba2bab669227, type: 3}
   OffsetCreation: {x: 0, y: 2, z: 0}
