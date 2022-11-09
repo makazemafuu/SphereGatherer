@@ -5,9 +5,18 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 12f;
-    public float gravity = -9.81f;
-    public float jumpHeight = 3f;
+
+    [SerializeField]
+    private float speed = 12f;
+
+    [SerializeField]
+    private float gravity = -9.81f;
+
+    [SerializeField]
+    private float jumpHeight = 3f;
+
+    [SerializeField]
+    private float mass = 3f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -46,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        velocity.y += gravity * Time.deltaTime;
+        velocity.y += gravity * mass * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
         //On gère le shoot
