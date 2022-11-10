@@ -33,14 +33,24 @@ public class Explosion : MonoBehaviour
     {
         //empty
     }
-
-    private void OnTriggerEnter(Collider other)
+    
+    private void OnCollisionEnter(Collision col)
     {
-        if (other.gameObject.name == "Floor")
+        if (col.gameObject.CompareTag("Projectil"))
         {
+            Debug.Log("Explode !");
             explode();
         }
     }
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Floor")
+        {
+            Debug.Log("Explode !");
+            explode();
+        }
+    }*/
 
     public void explode()
     {
@@ -93,7 +103,7 @@ public class Explosion : MonoBehaviour
         piece.GetComponent<Rigidbody>().mass = cubeSize;
 
         //change color of the tiny cubes
-        //piece.transform.GetComponent<Renderer>().material = gameObject.GetComponent<Renderer>().material;
+        piece.transform.GetComponent<Renderer>().material = gameObject.GetComponent<Renderer>().material;
     }
 
     //Destroy(Gameobject , time);

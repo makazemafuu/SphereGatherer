@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5443879804243629656, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
       propertyPath: m_Name
-      value: SmolCube Variant 1
+      value: SmolCube 1
       objectReference: {fileID: 0}
     - target: {fileID: 5443879804243629661, guid: cb61c562cb8e1ce429c57fe149a479f8, type: 3}
       propertyPath: m_RootOrder
