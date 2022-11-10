@@ -59,6 +59,6 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         //On gère le shoot
-        WantsToShoot = Input.GetButton("Fire1");
+        WantsToShoot = Input.GetButton("Fire3");
     }
 }
