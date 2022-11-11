@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f; //not 0f because this might happen before we are on the ground, so to make sure the player IS indeed on the ground we put a slightly lower negative number
         }
@@ -60,8 +60,34 @@ public class PlayerMovement : MonoBehaviour
         //function Move, framerate independent & with a given speed
         controller.Move(move * speed * Time.deltaTime);
 
+        if (x != 0 || z != 0)
+        {
+            if (speed == 20)
+            {
+                animator.SetInteger("Moving", 2);
+            }
+            else
+            {
+                animator.SetInteger("Moving", 1);
+            }
+        }
+        else
+        {
+            animator.SetInteger("Moving", 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed = 20;
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            speed = 12;
+        }
+
         //to allow the player to jump
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
