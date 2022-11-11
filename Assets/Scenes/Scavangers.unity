@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e5dd7e9032ad6428850a36eca6b7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyController: {fileID: 799311179}
+  MyController: {fileID: 2045740152}
   PrefabProjectile: {fileID: 7939308999921531984, guid: d5ae073be6c8df745926a0c18205c532, type: 3}
   ProjectileStartSpeed: 50
   OffsetForwardShoot: 2
