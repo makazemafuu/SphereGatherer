@@ -472,7 +472,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 799311177}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &678173285
 GameObject:
@@ -600,7 +600,6 @@ GameObject:
   - component: {fileID: 799311177}
   - component: {fileID: 799311178}
   - component: {fileID: 799311179}
-  - component: {fileID: 799311180}
   m_Layer: 0
   m_Name: FirstPersonPlayer
   m_TagString: Player
@@ -621,7 +620,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2045740150}
-  - {fileID: 2028354022}
   - {fileID: 597151283}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -661,28 +659,12 @@ MonoBehaviour:
   gravity: -19.62
   jumpHeight: 3
   mass: 1.5
+  Jammo: {fileID: 1367046486}
   groundCheck: {fileID: 597151283}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 8
---- !u!114 &799311180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799311176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3e5dd7e9032ad6428850a36eca6b7c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyController: {fileID: 799311179}
-  PrefabProjectile: {fileID: 7939308999921531984, guid: d5ae073be6c8df745926a0c18205c532, type: 3}
-  ProjectileStartSpeed: 80
-  OffsetForwardShoot: 2
-  TimeBetweenShots: 0.5
 --- !u!1 &828846780
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +859,11 @@ Transform:
   m_Father: {fileID: 373122904}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1080590994 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4635113084700394604, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
+  m_PrefabInstance: {fileID: 1283670129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1100083624 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 975815084460124599, guid: c98773da6392af64cab82875e9521596, type: 3}
@@ -902,6 +889,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 799311177}
     m_Modifications:
+    - target: {fileID: -6057140222963153312, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 535d24752e3d6444da644e79e90ec2ca, type: 2}
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -952,6 +943,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
+--- !u!1 &1367046486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
+  m_PrefabInstance: {fileID: 1283670129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1531297783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1446,7 @@ GameObject:
   - component: {fileID: 2028354020}
   - component: {fileID: 2028354023}
   - component: {fileID: 2028354024}
+  - component: {fileID: 2028354025}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1515,13 +1512,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028354019}
-  m_LocalRotation: {x: 0.037283916, y: -0, z: -0, w: 0.9993047}
-  m_LocalPosition: {x: 0.062000006, y: 0.30499983, z: -0.10400009}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: 0.73297894, y: 2.593063e-10, z: -1.15114945e-10, w: 0.68025136}
+  m_LocalPosition: {x: 0.0007, y: -0.0101, z: 0.046}
+  m_LocalScale: {x: 0.0035714284, y: 0.0035714295, z: 0.0035714295}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 799311177}
-  m_RootOrder: 1
+  m_Father: {fileID: 1080590994}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 4.273, y: 0, z: 0}
 --- !u!114 &2028354023
 MonoBehaviour:
@@ -1570,6 +1567,23 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &2028354025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028354019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e5dd7e9032ad6428850a36eca6b7c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyController: {fileID: 799311179}
+  PrefabProjectile: {fileID: 7939308999921531984, guid: d5ae073be6c8df745926a0c18205c532, type: 3}
+  ProjectileStartSpeed: 50
+  OffsetForwardShoot: 2
+  TimeBetweenShots: 0.5
 --- !u!4 &2045740150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38, type: 3}

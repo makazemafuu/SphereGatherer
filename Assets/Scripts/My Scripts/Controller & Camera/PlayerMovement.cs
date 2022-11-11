@@ -18,6 +18,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float mass = 3f;
 
+    //Référence pour Jammo
+    [SerializeField]
+    private GameObject Jammo;
+
+    private Animator animator;
+
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -27,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+
+    void Start()
+    {
+        animator = Jammo.GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
