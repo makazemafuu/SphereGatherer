@@ -7,7 +7,13 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
 
     [SerializeField]
-    private float speed = 12f;
+    private float speed = 0f;
+
+    [SerializeField]
+    private float speedWalk = 10f;
+
+    [SerializeField]
+    private float speedRun = 15f;
 
     [SerializeField]
     private float gravity = -9.81f;
@@ -37,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         animator = Jammo.GetComponent<Animator>();
+        speed = speedWalk;
     }
 
     // Update is called once per frame
@@ -62,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (x != 0 || z != 0)
         {
-            if (speed == 20)
+            if (speed == speedRun)
             {
                 animator.SetInteger("Moving", 2);
             }
@@ -78,12 +85,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            speed = 20;
+            speed = speedRun;
         }
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            speed = 12;
+            speed = speedWalk;
         }
 
         //to allow the player to jump
