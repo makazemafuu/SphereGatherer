@@ -2565,8 +2565,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652099190}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4962, y: -55, z: -4896}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4962.0005, y: -55, z: -4896.0005}
   m_LocalScale: {x: 10000, y: 1, z: 10000}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3044,7 +3044,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 10000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -3071,7 +3071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028354019}
   m_LocalRotation: {x: -0.03204489, y: -1.28828814e-17, z: 1.4805994e-17, w: 0.99948645}
-  m_LocalPosition: {x: 0.00070000114, y: 0.010669758, z: 0.007978459}
+  m_LocalPosition: {x: 0.0008716115, y: 0.010871725, z: 0.00017203996}
   m_LocalScale: {x: 0.0035714286, y: 0.0035714281, z: 0.0035714281}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3090,8 +3090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0234b34d4455944cab72eeb0a8c7213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
-  playerBody: {fileID: 799311177}
+  mouseSensitivity: 50
+  playerBody: {fileID: 2045740150}
 --- !u!114 &2028354024
 MonoBehaviour:
   m_ObjectHideFlags: 0
