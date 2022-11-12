@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = Jammo.GetComponent<Animator>();
         speed = speedWalk;
+        //UI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -126,5 +127,23 @@ public class PlayerMovement : MonoBehaviour
 
         //On gère le shoot
         WantsToShoot = Input.GetButton("Fire1");
+
+        /*private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Ground"))
+            {
+                Debug.Log("Player is on the ground !");
+                isOnGround = true;
+            }
+
+            if (collision.gameObject.CompareTag("Terrain"))
+            {
+                Debug.Log("Player is on the terrain !");
+                isOnTerrain = true;
+
+                //collision.gameObject.SetActive(false);
+                //UI.SetActive(true);
+            }
+        }*/
     }
 }
