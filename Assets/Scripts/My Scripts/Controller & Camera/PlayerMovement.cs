@@ -10,10 +10,10 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 0f;
 
     [SerializeField]
-    private float speedWalk = 8f;
+    private float speedWalk = 5f;
 
     [SerializeField]
-    private float speedRun = 12f;
+    private float speedRun = 10f;
 
     [SerializeField]
     private float gravity = -9.81f;
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject Jammo;
 
-    private bool crouch;
+    private bool isCrouching;
 
     private Animator animator;
 
@@ -67,7 +67,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         //function Move, framerate independent & with a given speed
-        controller.Move(move * speed * Time.deltaTime);
+        if (!isCrouching)
+        {
+            controller.Move(move * speed * Time.deltaTime);
+        }
 
         if (x != 0 || z != 0)
         {
@@ -95,20 +98,20 @@ public class PlayerMovement : MonoBehaviour
             speed = speedWalk;
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab) && crouch == false)
+        if (Input.GetKeyDown(KeyCode.C) && isCrouching == false)
         {
             animator.SetBool("Crouch", true);
-            crouch = true;
+            isCrouching = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.Tab) && crouch == true)
+        if (Input.GetKeyUp(KeyCode.C) && isCrouching == true)
         {
             animator.SetBool("Crouch", false);
-            crouch = false;
+            isCrouching = false;
         }
 
         //to allow the player to jump
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && isCrouching == false)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             animator.SetBool("Jump", true);
