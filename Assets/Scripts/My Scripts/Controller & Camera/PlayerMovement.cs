@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject Jammo;
 
+    private bool crouch;
+
     private Animator animator;
 
     public Transform groundCheck;
@@ -93,13 +95,16 @@ public class PlayerMovement : MonoBehaviour
             speed = speedWalk;
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && crouch == false)
         {
             animator.SetBool("Crouch", true);
+            crouch = true;
         }
-        else
+
+        if (Input.GetKeyUp(KeyCode.Tab) && crouch == true)
         {
             animator.SetBool("Crouch", false);
+            crouch = false;
         }
 
         //to allow the player to jump
