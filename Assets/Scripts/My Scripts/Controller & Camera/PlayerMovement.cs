@@ -10,10 +10,10 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 0f;
 
     [SerializeField]
-    private float speedWalk = 10f;
+    private float speedWalk = 8f;
 
     [SerializeField]
-    private float speedRun = 15f;
+    private float speedRun = 12f;
 
     [SerializeField]
     private float gravity = -9.81f;
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpHeight = 3f;
 
     [SerializeField]
-    private float mass = 3f;
+    private float mass = 1.5f;
 
     //Référence pour Jammo
     [SerializeField]
@@ -93,6 +93,15 @@ public class PlayerMovement : MonoBehaviour
             speed = speedWalk;
         }
 
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            animator.SetBool("Crouch", true);
+        }
+        else
+        {
+            animator.SetBool("Crouch", false);
+        }
+
         //to allow the player to jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -108,6 +117,6 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         //On gère le shoot
-        WantsToShoot = Input.GetButton("Fire3");
+        WantsToShoot = Input.GetButton("Fire1");
     }
 }
