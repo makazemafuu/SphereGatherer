@@ -109,8 +109,8 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   maxSpeed: 20
   minSpeed: 10
-  drawGizmos: 0
-  drawLines: 0
+  drawGizmos: 1
+  drawLines: 1
   player: {fileID: -927199367670048503, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
 --- !u!82 &-4343484978241209045
 AudioSource:
