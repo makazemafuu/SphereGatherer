@@ -47,11 +47,13 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     bool isOnFloor;
 
+    [SerializeField] GameObject UI;
+
     void Start()
     {
         animator = Jammo.GetComponent<Animator>();
         speed = speedWalk;
-        //UI.SetActive(false);
+        UI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -71,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("The player is on the floor !");
             velocity.y = -2f; //not 0f because this might happen before we are on the ground, so to make sure the player IS indeed on the ground we put a slightly lower negative number
+            //collision.gameObject.SetActive(false);
+            UI.SetActive(true);
         }
 
         float x = Input.GetAxis("Horizontal");
