@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
             speed = speedWalk;
         }
 
-        if (Input.GetKeyDown(KeyCode.C) && isCrouching == false)
+        if (Input.GetKeyDown(KeyCode.C) && isCrouching == false && speed != speedRun)
         {
             animator.SetBool("Crouch", true);
             isCrouching = true;
