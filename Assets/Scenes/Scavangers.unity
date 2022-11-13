@@ -3398,6 +3398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 5202184343093395440, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5202184343093395442, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_UiScaleMode
       value: 1

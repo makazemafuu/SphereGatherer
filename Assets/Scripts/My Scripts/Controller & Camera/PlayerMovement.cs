@@ -74,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("The player is on the floor !");
             velocity.y = -2f; //not 0f because this might happen before we are on the ground, so to make sure the player IS indeed on the ground we put a slightly lower negative number
             //collision.gameObject.SetActive(false);
+            Cursor.visible = true;
             UI.SetActive(true);
         }
 
