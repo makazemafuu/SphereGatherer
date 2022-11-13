@@ -36,14 +36,16 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    public Transform floorCheck;
+    public float floorDistance = 0.4f;
+    public LayerMask floorMask;
+
     //to shoot things
     public bool WantsToShoot { get; protected set; } = false;
 
     Vector3 velocity;
     bool isGrounded;
-
-    [SerializeField]
-    private bool isOnFloor = false;
+    bool isOnFloor;
 
     void Start()
     {
@@ -60,6 +62,14 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             Debug.Log("The player is on the ground !");
+            velocity.y = -2f; //not 0f because this might happen before we are on the ground, so to make sure the player IS indeed on the ground we put a slightly lower negative number
+        }
+
+        isOnFloor = Physics.CheckSphere(floorCheck.position, floorDistance, floorMask);
+
+        if (isOnFloor && velocity.y < 0)
+        {
+            Debug.Log("The player is on the floor !");
             velocity.y = -2f; //not 0f because this might happen before we are on the ground, so to make sure the player IS indeed on the ground we put a slightly lower negative number
         }
 
@@ -134,15 +144,23 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
-            Debug.Log("The player is on the floor !");
-            isOnFloor = true;
+            if (isOnFloor && velocity.y < 0)
+            {
 
-            collision.gameObject.SetActive(false);
-            //UI.SetActive(true);
+                isOnFloor = Physics.CheckSphere(floorCheck.position, floorDistance, floorMask);
+
+                Debug.Log("The player is on the floor !");
+                velocity.y = -2f; //not 0f because this might happen before we are on the ground, so to make sure the player IS indeed on the ground we put a slightly lower negative number
+                isOnFloor = true;
+
+                collision.gameObject.SetActive(false);
+                //UI.SetActive(true);
+
+            }
         }
-    }
+    }*/
 }
