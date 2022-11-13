@@ -42,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    [SerializeField]
+    private bool isOnFloor = false;
+
     void Start()
     {
         animator = Jammo.GetComponent<Animator>();
@@ -56,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded && velocity.y < 0)
         {
+            Debug.Log("The player is on the ground !");
             velocity.y = -2f; //not 0f because this might happen before we are on the ground, so to make sure the player IS indeed on the ground we put a slightly lower negative number
         }
 
@@ -128,22 +132,17 @@ public class PlayerMovement : MonoBehaviour
         //On gère le shoot
         WantsToShoot = Input.GetButton("Fire1");
 
-        /*private void OnCollisionEnter(Collision collision)
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
         {
-            if (collision.gameObject.CompareTag("Ground"))
-            {
-                Debug.Log("Player is on the ground !");
-                isOnGround = true;
-            }
+            Debug.Log("The player is on the floor !");
+            isOnFloor = true;
 
-            if (collision.gameObject.CompareTag("Terrain"))
-            {
-                Debug.Log("Player is on the terrain !");
-                isOnTerrain = true;
-
-                //collision.gameObject.SetActive(false);
-                //UI.SetActive(true);
-            }
-        }*/
+            collision.gameObject.SetActive(false);
+            //UI.SetActive(true);
+        }
     }
 }
