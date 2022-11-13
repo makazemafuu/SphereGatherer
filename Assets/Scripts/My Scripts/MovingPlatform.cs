@@ -25,7 +25,7 @@ public class MovingPlatform : MonoBehaviour
 
     void FixedUpdate()
     {
-        _elapsedTime += Time.fixedDeltaTime;
+        _elapsedTime += Time.deltaTime;
 
         float elapsedPercentage = _elapsedTime / _timeToWaypoint;
         elapsedPercentage = Mathf.SmoothStep(0, 1, elapsedPercentage);
