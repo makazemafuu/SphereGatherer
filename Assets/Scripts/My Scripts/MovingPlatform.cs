@@ -52,11 +52,11 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Player.transform.parent = transform;
+        other.transform.parent = transform;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Player.transform.parent = null;
+        other.transform.parent = null;
     }
 }
