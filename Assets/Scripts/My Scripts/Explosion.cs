@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+
+    [SerializeField]
+    private GameObject GetSphereToWin;
+
     [SerializeField]
     private float cubeSize = 0.2f;
     [SerializeField]
@@ -23,7 +27,7 @@ public class Explosion : MonoBehaviour
     {
         //calculate pivot distance
         cubesPivotDistance = cubeSize * cubeInRow / 2;
-
+        GetSphereToWin.gameObject.SetActive(false);
         //use this value to create pivot vector
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
     }
@@ -40,6 +44,7 @@ public class Explosion : MonoBehaviour
         {
             Debug.Log("Explode !");
             explode();
+            GetSphereToWin.gameObject.SetActive(true);
         }
     }
 

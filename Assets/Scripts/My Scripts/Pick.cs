@@ -8,6 +8,9 @@ public class Pick : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float interactRange = 0.5f;
 
+    [SerializeField]
+    private GameObject GetSphereToWin;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,17 @@ public class Pick : MonoBehaviour
         if (distanceToPlayer.magnitude <= interactRange && Input.GetKeyDown(KeyCode.E))
         {
             //Action (joue un son, fait une animation, ...)
+            GetSphereToWin.gameObject.SetActive(false);
             Debug.Log("Player picked the object !");
         }
     }
+
+    /*void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Destroy"))
+        {
+            Destroy(other.gameObject);
+        }
+    }*/
+
 }

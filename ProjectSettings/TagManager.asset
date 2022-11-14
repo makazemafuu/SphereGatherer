@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - Projectil
   - PlayerEyes
+  - Destroy
   layers:
   - Default
   - TransparentFX
