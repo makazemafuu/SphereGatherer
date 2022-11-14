@@ -255,7 +255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &9008101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,6 +442,10 @@ PrefabInstance:
     - target: {fileID: 8544787133407154036, guid: cd9ded6d1be737e40a3b873669caa63d, type: 3}
       propertyPath: m_Name
       value: GetSphereToWin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8544787133407154036, guid: cd9ded6d1be737e40a3b873669caa63d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd9ded6d1be737e40a3b873669caa63d, type: 3}
@@ -1043,7 +1047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &412084337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,7 +1465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &596625917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1838,7 +1842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &678173286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1952,7 +1956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &694372316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2100,7 +2104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &809074036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3084,7 +3088,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 3840, y: 2160}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -4476,7 +4480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1294555004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4887,6 +4891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GetSphereToWin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8544787133407154036, guid: cd9ded6d1be737e40a3b873669caa63d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd9ded6d1be737e40a3b873669caa63d, type: 3}
 --- !u!1 &1495094927 stripped
@@ -4931,7 +4939,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 3840, y: 2160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503716802
 MonoBehaviour:
@@ -6342,7 +6350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &2141356665
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6450,7 +6458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202184343093395440, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5202184343093395442, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_UiScaleMode
@@ -6458,11 +6466,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202184343093395442, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_ReferenceResolution.x
-      value: 1920
+      value: 3840
       objectReference: {fileID: 0}
     - target: {fileID: 5202184343093395442, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_ReferenceResolution.y
-      value: 1080
+      value: 2160
       objectReference: {fileID: 0}
     - target: {fileID: 5202184343093395452, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_Pivot.x
@@ -6550,11 +6558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202184343798428210, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1920
+      value: 3840
       objectReference: {fileID: 0}
     - target: {fileID: 5202184343798428210, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1080
+      value: 2160
       objectReference: {fileID: 0}
     - target: {fileID: 5202184343798428210, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6844,6 +6852,10 @@ PrefabInstance:
     - target: {fileID: 8544787133407154036, guid: cd9ded6d1be737e40a3b873669caa63d, type: 3}
       propertyPath: m_Name
       value: GetSphereToWin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8544787133407154036, guid: cd9ded6d1be737e40a3b873669caa63d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd9ded6d1be737e40a3b873669caa63d, type: 3}
