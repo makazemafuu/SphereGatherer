@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pick : MonoBehaviour
 {
 
-    [SerializeField] Transform player;
+    [SerializeField] GameObject player;
     [SerializeField] float interactRange = 0.5f;
 
     [SerializeField]
@@ -21,14 +21,15 @@ public class Pick : MonoBehaviour
     void Update()
     {
         //Distance entre le joueur et l'objet. Permet de savoir si le joueur est assez prêt pour activer l'objet
-        Vector3 distanceToPlayer = player.position - transform.position;
+        Vector3 distanceToPlayer = player.transform.position - transform.position;
 
         //Si le joueur est proche
         if (distanceToPlayer.magnitude <= interactRange && Input.GetKeyDown(KeyCode.E))
         {
             //Action (joue un son, fait une animation, ...)
-            GetSphereToWin.gameObject.SetActive(false);
             Debug.Log("Player picked the object !");
+            GetSphereToWin.gameObject.SetActive(false);
+            player.GetComponent<PlayerMovement>().nbSpheres++;
         }
     }
 

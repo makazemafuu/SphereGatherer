@@ -6,6 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
 
+    public int nbSpheres;
+
+    [SerializeField]
+    private int nbSpheresInMap;
+
     [SerializeField]
     private float speed = 0f;
 
@@ -48,12 +53,15 @@ public class PlayerMovement : MonoBehaviour
     bool isOnFloor;
 
     [SerializeField] GameObject UI;
+    [SerializeField] GameObject UIWin;
 
     void Start()
     {
         animator = Jammo.GetComponent<Animator>();
         speed = speedWalk;
         UI.SetActive(false);
+        UIWin.SetActive(false);
+        nbSpheres = 0;
     }
 
     // Update is called once per frame
@@ -73,9 +81,14 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("The player is on the floor !");
             velocity.y = -2f; //not 0f because this might happen before we are on the ground, so to make sure the player IS indeed on the ground we put a slightly lower negative number
-            //collision.gameObject.SetActive(false);
             Cursor.visible = true;
             UI.SetActive(true);
+        }
+
+        if (nbSpheres == nbSpheresInMap)
+        {
+            Debug.Log("Player wins !");
+            UIWin.SetActive(true);
         }
 
         float x = Input.GetAxis("Horizontal");
