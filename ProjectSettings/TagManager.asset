@@ -10,6 +10,7 @@ TagManager:
   - Projectil
   - PlayerEyes
   - Destroy
+  - UIWin
   layers:
   - Default
   - TransparentFX
