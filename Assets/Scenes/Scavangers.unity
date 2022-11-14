@@ -2712,6 +2712,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052862765}
   m_CullTransparentMesh: 1
+--- !u!1 &1071884039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 752314738769183843, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
+  m_PrefabInstance: {fileID: 752314738914059108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1283670129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5144,6 +5149,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   UI: {fileID: 450564309}
+  UIWin: {fileID: 1071884039}
 --- !u!143 &2045740153
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5543,6 +5549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIWin
       objectReference: {fileID: 0}
+    - target: {fileID: 752314738769183843, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 752314738769183855, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5642,7 +5652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202184343093395440, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5202184343093395442, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_UiScaleMode
