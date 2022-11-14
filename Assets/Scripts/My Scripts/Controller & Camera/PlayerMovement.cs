@@ -88,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
         if (nbSpheres == nbSpheresInMap)
         {
             Debug.Log("Player wins !");
+            Cursor.visible = true;
             UIWin.SetActive(true);
         }
 
