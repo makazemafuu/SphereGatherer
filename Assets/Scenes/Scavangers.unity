@@ -5643,8 +5643,12 @@ PrefabInstance:
       value: UIWin
       objectReference: {fileID: 0}
     - target: {fileID: 3901576055009932828, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901576055009932828, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 45
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3901576055009932829, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
       propertyPath: m_TagString
@@ -5780,11 +5784,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3901576056329019617, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -50
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 3901576056329019617, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 45
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3901576056329019630, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
       propertyPath: m_TagString
