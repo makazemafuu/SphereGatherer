@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class IG1EnemyController : AgentController
 {
-    [SerializeField] Light _Light;
+    //[SerializeField] Light _Light;
+
 
     float _TimeBeforeNextPatrol;
     Vector3 newDirection;
@@ -63,7 +64,7 @@ public class IG1EnemyController : AgentController
         }
 
 
-        if(_DistanceFromTarget < _Precision)
+        if (_DistanceFromTarget < _Precision)
         {
             _HasATarget = false;
             _CountTimeStop = 0;
@@ -87,21 +88,24 @@ public class IG1EnemyController : AgentController
             Patrol();
         }
 
-        if(_HasATarget)
+        /*if(_HasATarget)
         {
             _Light.color = Color.red;
         }
         else
         {
             _Light.color = Color.yellow;
-        }
+        }*/
 
         _LastPosition = transform.position;
     }
 
     void HandleSight(SightStimulus sti, AISense<SightStimulus>.Status evt)
     {
-        if(sti.position == Vector3.zero) { return; }
+        if (sti.position == Vector3.zero || PlayerMovement.instance.isCrouching)
+        {
+            return;
+        }
 
         if (evt == AISense<SightStimulus>.Status.Enter)
         {
@@ -117,7 +121,7 @@ public class IG1EnemyController : AgentController
 
         if ((sti.position - transform.position).sqrMagnitude < 2 * 2)
         {
-            
+
             //ia te touche
         }
     }
@@ -150,7 +154,7 @@ public class IG1EnemyController : AgentController
 
         if (_DistanceToEndPatrol < 15 || _DistanceToEndPatrol > 25)
         {
-            if(transform.position.x > 50 && transform.position.x < 90 && transform.position.z > 20 && transform.position.z < 65)
+            if (transform.position.x > 50 && transform.position.x < 90 && transform.position.z > 20 && transform.position.z < 65)
             {
                 Patrol();
                 return;

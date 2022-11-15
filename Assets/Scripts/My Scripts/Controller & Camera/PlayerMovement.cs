@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
+
+    void Awake()
+    {
+        if(instance != null)
+        {
+            Debug.Log("Il y a plus d'une instance de PlayerMovement dans la scène.");
+            return;
+        }
+        instance = this;
+    }
+
     public CharacterController controller;
 
     public int nbSpheres;
@@ -33,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject Jammo;
 
-    private bool isCrouching;
+    public bool isCrouching;
 
     private Animator animator;
 
