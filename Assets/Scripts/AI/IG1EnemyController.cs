@@ -10,7 +10,7 @@ public class IG1EnemyController : AgentController
 
 
     float _TimeBeforeNextPatrol;
-    Vector3 newDirection;
+    public Vector3 newDirection;
     bool _IsOnPatrol = false;
     float _DistanceToEndPatrol = 0f;
     int _CountTimeStop = 0;
@@ -22,8 +22,14 @@ public class IG1EnemyController : AgentController
     Vector3 _LastPosition = Vector3.zero;
     Vector3 _InitialPosition;
 
+    //[SerializeField]
+    //float timeDetection = 1f;
+
+    [SerializeField] GameObject UI;
+
     public override void Start()
     {
+        UI.SetActive(false);
         base.Start();
         Transform player = GameObject.FindGameObjectWithTag("Player").transform;
         GetComponent<AISenseSight>().AddSenseHandler(new AISense<SightStimulus>.SenseEventHandler(HandleSight));
@@ -37,6 +43,7 @@ public class IG1EnemyController : AgentController
 
         _Precision = 1f;
         _HasATarget = false;
+        Patrol();
 
         _TimeBeforeNextPatrol = Random.Range(1, 3);
     }
@@ -100,24 +107,39 @@ public class IG1EnemyController : AgentController
         _LastPosition = transform.position;
     }
 
+
+    /*IEnumerator seeing()
+    {
+        yield return new WaitForSeconds(timeDetection);
+        UI.SetActive(true);
+    }*/
     void HandleSight(SightStimulus sti, AISense<SightStimulus>.Status evt)
     {
         if (sti.position == Vector3.zero || PlayerMovement.instance.isCrouching)
         {
+            Debug.Log("IA saw you !");
             return;
         }
 
-        if (evt == AISense<SightStimulus>.Status.Enter)
+        if (evt == AISense<SightStimulus>.Status.Enter && !PlayerMovement.instance.isCrouching)
         {
+            UI.SetActive(true);
+
             Debug.Log("Objet " + evt + " vue en " + sti.position);
             _IsOnPatrol = false;
             _CountTimeStop = 0;
             _HasATarget = true;
         }
 
+        if (evt == AISense<SightStimulus>.Status.Enter)
+        {
+            Debug.Log("IA saw you !");
+        }
+
         _LastStimulisPosition = sti.position;
 
-        _NavMeshAgent.SetDestination(sti.position);
+        FindPathTo(sti.position);
+        //_NavMeshAgent.SetDestination(sti.position);
 
         if ((sti.position - transform.position).sqrMagnitude < 2 * 2)
         {
@@ -139,8 +161,8 @@ public class IG1EnemyController : AgentController
         }
 
         _LastStimulisPosition = sti.position;
-        _NavMeshAgent.SetDestination(sti.position);
-        //FindPathTo(sti.position);
+        //_NavMeshAgent.SetDestination(sti.position);
+        FindPathTo(sti.position);
     }
 
     void Patrol()
@@ -148,13 +170,13 @@ public class IG1EnemyController : AgentController
         _IsOnPatrol = true;
         _TimeBeforeNextPatrol = Random.Range(3, 8);
 
-        newDirection = new Vector3(Random.Range(50, 90), transform.position.y, Random.Range(20, 65));
+        newDirection = new Vector3(Random.Range(-40, 20), transform.position.y, Random.Range(-20, 40));
 
         _DistanceToEndPatrol = Vector3.Distance(newDirection, transform.position);
 
         if (_DistanceToEndPatrol < 15 || _DistanceToEndPatrol > 25)
         {
-            if (transform.position.x > 50 && transform.position.x < 90 && transform.position.z > 20 && transform.position.z < 65)
+            if (transform.position.x > -40 && transform.position.x < 20 && transform.position.z > -20 && transform.position.z < 40)
             {
                 Patrol();
                 return;
@@ -162,7 +184,7 @@ public class IG1EnemyController : AgentController
             newDirection = _InitialPosition;
         }
 
-        //FindPathTo(newDirection);
-        _NavMeshAgent.SetDestination(newDirection);
+        FindPathTo(newDirection);
+        //_NavMeshAgent.SetDestination(newDirection);
     }
 }

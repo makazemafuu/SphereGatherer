@@ -493,7 +493,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3165,11 +3165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.504
+      value: -0.35649896
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.90999985
+      value: 1.8851528
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4491,7 +4491,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -4579,7 +4579,7 @@ GameObject:
   m_Layer: 6
   m_Name: Floor
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
@@ -5334,7 +5334,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -5730,7 +5730,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 6078eab9410a8c24a85a90c3a7eb7d64, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3f22ffa6a48715a4682ba021461ebec3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6618,19 +6618,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998212, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998212, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.603
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998212, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998212, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98654485
+      value: 0.7166225
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998212, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6638,7 +6638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998212, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.163491
+      value: 0.6974613
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998212, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: m_LocalRotation.z
@@ -6650,16 +6650,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998212, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 18.819
+      value: 88.447
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998212, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6477875072491998217, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
+      propertyPath: MaxDistance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477875072491998223, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 450564309}
     - target: {fileID: 6477875072491998223, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: agent
       value: 
       objectReference: {fileID: 952367875}
+    - target: {fileID: 6477875072491998223, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
+      propertyPath: timeDetection
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
 --- !u!1001 &8544787134262170868
