@@ -25,11 +25,11 @@ public class IG1EnemyController : AgentController
     //[SerializeField]
     //float timeDetection = 1f;
 
-    [SerializeField] GameObject UI;
+    [SerializeField] GameObject UIEnemy;
 
     public override void Start()
     {
-        UI.SetActive(false);
+        UIEnemy.SetActive(false);
         base.Start();
         Transform player = GameObject.FindGameObjectWithTag("Player").transform;
         GetComponent<AISenseSight>().AddSenseHandler(new AISense<SightStimulus>.SenseEventHandler(HandleSight));
@@ -123,7 +123,7 @@ public class IG1EnemyController : AgentController
 
         if (evt == AISense<SightStimulus>.Status.Enter && !PlayerMovement.instance.isCrouching)
         {
-            UI.SetActive(true);
+            UIEnemy.SetActive(true);
 
             Debug.Log("Objet " + evt + " vue en " + sti.position);
             _IsOnPatrol = false;
