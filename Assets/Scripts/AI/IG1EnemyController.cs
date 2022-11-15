@@ -117,7 +117,7 @@ public class IG1EnemyController : AgentController
 
         _LastStimulisPosition = sti.position;
 
-        FindPathTo(sti.position);
+        _NavMeshAgent.SetDestination(sti.position);
 
         if ((sti.position - transform.position).sqrMagnitude < 2 * 2)
         {
@@ -139,8 +139,8 @@ public class IG1EnemyController : AgentController
         }
 
         _LastStimulisPosition = sti.position;
-
-        FindPathTo(sti.position);
+        _NavMeshAgent.SetDestination(sti.position);
+        //FindPathTo(sti.position);
     }
 
     void Patrol()
@@ -162,6 +162,7 @@ public class IG1EnemyController : AgentController
             newDirection = _InitialPosition;
         }
 
-        FindPathTo(newDirection);
+        //FindPathTo(newDirection);
+        _NavMeshAgent.SetDestination(newDirection);
     }
 }
