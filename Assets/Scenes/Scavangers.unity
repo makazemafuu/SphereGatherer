@@ -6042,6 +6042,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: UIWin
       objectReference: {fileID: 0}
+    - target: {fileID: 3901576055257715035, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c4f1d106f71fd0142b6e0f6535af2b78, type: 3}
     - target: {fileID: 3901576055416937201, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
       propertyPath: m_TagString
       value: UIWin
@@ -6136,7 +6140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3901576055756755870, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3901576055756755870, guid: 43524a78f0b34e74daec24c708d66344, type: 3}
       propertyPath: m_TagString
@@ -6274,8 +6278,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4735588974668002648, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4735588975036446869, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c4f1d106f71fd0142b6e0f6535af2b78, type: 3}
     - target: {fileID: 4735588975036446874, guid: cf1e010467ef42f4e9c9590fe74fe2a3, type: 3}
       propertyPath: m_SizeDelta.x
       value: 3840
