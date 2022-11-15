@@ -27,3 +27,4 @@ Bonus :
 
 J'ai ajouté en bonus (et pour le fun !) un Explosion script me permettant de faire exploser mes cubes en petit morceau, j'espère que cela vous plaira et vous amusera malgré les petits glitches et l'imperfection de mon projet. ^-^
 Merci de m'avoir lu et d'avoir testé mon mini jeu de plateforme. ♫
+P.S. : le son des sphères et une petite blague pour notre Guigui préféré, mais si un jour je termine le projet, évidemment je changerais aussi les SFX ! xD
