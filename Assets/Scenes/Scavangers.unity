@@ -6839,7 +6839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998217, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: MaxDistance
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6477875072491998223, guid: d3d28b813c9a9be4abc4ece926aa6980, type: 3}
       propertyPath: UI
@@ -7236,8 +7236,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8614699878412975909, guid: 01becc9234d8b3f4ca5463d33cc186f3, type: 3}
       propertyPath: m_Text
-      value: "Oh no, the enemy saw you are left with two choices. Play again and
-        live, or quit and die. \nWhat will it be ?"
+      value: "Oh no, the enemy saw you ! You are left with two choices. Play again
+        and live, or quit and die. \nWhat will it be ?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01becc9234d8b3f4ca5463d33cc186f3, type: 3}
